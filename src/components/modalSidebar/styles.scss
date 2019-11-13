@@ -18,10 +18,9 @@
 }
 
 .iphn-img {
-  @include fullWidth(100%, left);
+  width: 100%;
   text-align: center;
   padding: 13px 0px 26px 0px;
-  cursor: pointer;
 }
 
 .image-style {
@@ -400,5 +399,71 @@
 
   .aspect {
     margin-left: 5px;
+  }
+}
+
+.iphn-brand-container {
+  border-top: 1px solid #eef2f6;
+  border-bottom: 1px solid #eef2f6;
+  display: flex;
+  padding: 14px;
+  
+  .brand-title {
+    flex-basis: 50%;
+    color: #91A8BF;
+    opacity: 0.5;
+    font-size: 12px;
+  }
+
+  .brand-name {
+    cursor: pointer;
+    font-weight: 600;
+    flex-basis: 50%;
+    color: #242B2E;
+    opacity: 1;
+    font-size: 18px;
+    text-align: right;
+
+    &:after{
+      content: '>';
+      margin-left: 9.5px;
+      padding: 0px 6px;
+      background-color: black;
+      border-radius: 3px;
+      color: white;
+    }
+  }
+}
+
+.iphn-reviews-container {
+  margin-top: 10px;
+  border-bottom: 1px solid #eef2f6;
+
+  .review-item {
+    padding: 14px 25px;
+    cursor: pointer;
+
+    .reviews-count {
+      font-size: 10px;
+    }
+
+    &.active {
+      padding: 14px 20px;
+      color: #03A9F4;
+      font-weight: 600;
+
+      &:before {
+        content: ' ';
+        display: inline-block;
+        padding: 0;
+        width: 5px;
+        height: 8px;
+        background: #03A9F4;
+        border-radius: 0px 40px 40px 0px;
+        opacity: 1;
+        left: -20px;
+        position: relative;
+      }
+    }
   }
 }

@@ -4,15 +4,23 @@
   padding-top: 20px;
   .review_info{
     display: inline-flex;
+    margin-top: 24px;
   }
   .review_text{
     width: 95%;
     .review_name{
       padding: 13px;
+      font-size: 14px;
+      font-weight: 600;
     }
     .review_time{
       padding: 13px;
-      color: $light_grey;
+      color: #91A8BF;
+      font-size: 10px;
+    }
+    .review_rating {
+      padding-left: 4px;
+      margin-top: -10px;
     }
     .left_review{
       padding: 13px;

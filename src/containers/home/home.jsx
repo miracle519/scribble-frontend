@@ -30,7 +30,6 @@ type Props = {
   versionDetailState: Object,
   trendingProducts: Array<trendingProductType>,
   smartPhoneDetails: Object,
-  relatedProductsToDevice: Array<Object>,
   cbfilteredProducts: Array<Object>
 }
 class Home extends React.Component<Props, State> {
@@ -51,7 +50,6 @@ class Home extends React.Component<Props, State> {
             brands={brands}
             versionDetailState={versionDetailState}
             smartPhoneDetails={smartPhoneDetails}
-            relatedProductsToDevice={relatedProductsToDevice}
             trendingProducts={trendingProducts}
           />
         </Desktop>
@@ -74,8 +72,7 @@ const mapStateToProps = state => {
     categories: state.categories,
     brands: state.brands,
     smartPhoneDetails: state.smartPhoneDetails,
-    versionDetailState: state.versionDetail,
-    relatedProductsToDevice: state.relatedProducts
+    versionDetailState: state.versionDetail
 
   }
 }

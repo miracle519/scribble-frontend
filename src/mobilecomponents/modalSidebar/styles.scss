@@ -9,7 +9,7 @@
 }
 
 .iphn-img {
-  @include fullWidth(100%, left);
+  width: 100%;
   text-align: center;
   padding: 13px 0px 26px 0px;
 }

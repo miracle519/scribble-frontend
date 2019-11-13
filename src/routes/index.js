@@ -18,44 +18,42 @@ const Embedded = React.lazy(() => import('../containers/embedded/index.jsx'))
 
 
 const Loading = () => {
-    return <div className = "appHeader" > ...loading </ div>
+    return <div className="appHeader" > ...loading </ div>
 }
 
-    type Props = {}
-    const ProjectRoutes = (props: Props) => {
-        return ( 
-            <BrowserRouter>
-                <Suspense fallback = {<Loading/>} >
-                    
-                    <Switch >
+type Props = {}
+const ProjectRoutes = (props: Props) => {
+    return (
+        <BrowserRouter>
+            <Suspense fallback={<Loading />} >
 
-                    <Route path = "/" exact component = { Home } /> 
-                    <Route path = "/app/versus"  exact component = { Versus }
-                    /> 
-                    <Route path = "/app/explore" exact component = { Explore } /> 
-                    <Route path = "/profile"   exact component = { Profile } />
+                <Switch >
 
-                    <Route path = "/signup" exact component = {   Signup   } />
+                    <Route path="/" exact component={Home} />
+                    <Route path="/app/versus" exact component={Versus}
+                    />
+                    <Route path="/app/explore" exact component={Explore} />
+                    <Route path="/profile" exact component={Profile} />
 
-                    <Route path = "/login"   exact component = {  Login  }  />
+                    <Route path="/signup" exact component={Signup} />
 
-                    <Route path = "/about"  exact component = { AboutUs }  />
+                    <Route path="/login" exact component={Login} />
 
-                    <Route path = "/detail" exact component = {  StandardDetailPage }  />
+                    <Route path="/about" exact component={AboutUs} />
 
-                    <Route path = "/guideline" exact component = { BrandGuideLines}  />
+                    <Route path="/detail" exact component={StandardDetailPage} />
 
-                    <Route path = "/embedded" exact component = {  Embedded  } />
+                    <Route path="/guideline" exact component={BrandGuideLines} />
 
-                    <Route path = "/detail"   exact component = { StandardDetailPage } />
+                    <Route path="/embedded" exact component={Embedded} />
 
-                    <Route path = "*"   exact component = {  NotFound } />
+                    <Route path="*" exact component={NotFound} />
 
-                    </Switch>
-                </Suspense>  
-            </BrowserRouter>
+                </Switch>
+            </Suspense>
+        </BrowserRouter>
 
-        )
-    }
+    )
+}
 
 export default ProjectRoutes
