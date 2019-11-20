@@ -105,7 +105,6 @@ class StandardDetailPage extends React.Component<Props, State> {
     const images = typeof smartPhoneDetails.smartPhoneDetails.result !== "undefined" ? smartPhoneDetails.smartPhoneDetails.result.images : [];
     const versions = typeof smartPhoneDetails.smartPhoneDetails.result !== "undefined" ? smartPhoneDetails.smartPhoneDetails.result.version : [];
     const versiondetail = typeof versionDetailState.versionDetailState.result !== "undefined" ? versionDetailState.versionDetailState.result.specification : {};
-    console.log(versions)
     return (
       <div className="standard_wrapper" >
         <Header />

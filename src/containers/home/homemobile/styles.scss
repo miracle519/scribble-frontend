@@ -324,6 +324,59 @@ html {
     background: white;
     z-index: 10;
 
+    .selectWrapper {
+      width: auto;
+      float: none;
+      margin-top: 18px;
+      display: flex;
+      margin-left: 10px;
+
+      .buttonChoose {
+        border-radius: 0;
+        &.active {
+          border: 1px solid white;
+          border-bottom-color: #03a9f4;
+        } 
+      }
+    }
+
+    .review-container {
+      padding: 0;
+      height: 100%;
+      overflow-y: unset;
+      overflow-x: unset;
+
+      .content {
+        padding: 0;
+        padding-top: 20px;
+      
+        .sign-up-message {
+          padding: 16px 14px 0 0;
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 0s, opacity 0.2s linear, padding-top 0.4s;
+          &.tranistion-hide {
+            visibility: hidden;
+            opacity: 0;
+            padding-top: 0px;
+          }
+    
+        }
+
+        .raty-button {
+          .raty-group {
+            .forget-text {
+              padding: 0px 0px 0px 10px;
+            }
+            
+            .star-ratings {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
     //padding-left: 12px;
     .m_phone-title.m_phone-type {
       border: 1px solid #91A8BF80;
@@ -373,6 +426,7 @@ html {
 
     .m_phone-design {
       margin-left: 18px;
+      margin-right: 18px;
 
       .section-title {
         padding: 16px 0px;

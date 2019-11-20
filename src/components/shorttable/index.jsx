@@ -17,7 +17,7 @@ const ShortTable = (props: Props) => {
    })
   
   return shortlists ? (
-    <div className="session_part" id={"panepart" + index}>
+    <div className="session_part" id={"content" + item}>
       <div className={index === 0 ? "session_title active" : "session_title"}>{item}</div>
       {
         shortlists.map((item1, index1) => item1 !== "Colors" ? (

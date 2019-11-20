@@ -31,7 +31,6 @@ const TypeSelectModal = (props: Props) => {
     } = props
 
     const [sidenav, setSideNav] = useState(0)
-    console.log(tabList);
     const callbackFunction = (data = 0) => {
         setSideNav(data)
         props.callbackHome(data)

@@ -3,10 +3,41 @@
 .review-container{
   width: 100%;
   float: left;
-  padding: 30px 0px 25px 15px;
+  padding: 15px;
   position: relative;
   background: #f6f8fa;
   display: block;
+  
+  height: calc(100vh - 165px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .content {
+    .sign-up-message {
+      padding-left: 42px;
+      padding-top: 32px;
+      color: #242B2ECC;
+      font-size: 12px;
+
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s, opacity 0.2s linear, padding-top 0.4s;
+      &.tranistion-hide {
+        visibility: hidden;
+        opacity: 0;
+        padding-top: 0px;
+      }
+
+      .sign-up-link {
+        cursor: pointer;
+        font-weight: 800;
+        color: #03A9F4;
+      }
+    }
+  }
 }
 
 .content{
@@ -24,11 +55,20 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  margin-top: -10px;
 }
 
 .comment{
   padding-top: 20px;
   display: flow-root;
+
+}
+
+.horizontal-rule {
+  margin-left: 40px;
+  margin-right: -20px;
+  height: 10px;
+  border-bottom: 1px solid #eef2f6;
 }
 
 .avatar-input{
@@ -40,12 +80,28 @@
   width: 100%;
   height: 100px !important;
   overflow: auto;
+  background: #EEF2F680;
+  border: 1px solid #DEE5EC;
+  border-radius: 8px;
+
+  text-align: left;
+  color: #91A8BF;
+  padding: 13px 21px;
+}
+
+.form-control.input-comment:focus {
+  border: 1px solid black;
+  box-shadow: none;
 }
 
 .raty-button{
   display: flex;
   float: right;
   padding-top: 10px;
+
+  .rating {
+    margin-right: 21px;
+  }
 }
 
 .forget-text{

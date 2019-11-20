@@ -38,9 +38,6 @@ const ComparativeProductViewer = (props: Props) => {
     : []
   const cbfilters = typeof cbfilteredProducts.cbfilterProducts !== 'undefined' && typeof cbfilteredProducts.cbfilterProducts.result !== 'undefined' ? cbfilteredProducts.cbfilterProducts.result : []
   // const cbfilterd =typeof cbfilteredProducts.cbfilteredProducts.result.
-  console.log("dfsdfsdfsdfyhoweurowjfdnv")
-  console.log(cbfilters)
-  console.log(devices)
   return devices ? (
     <div className="comparission_dropdown">
       <div className="drop_row">

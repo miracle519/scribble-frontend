@@ -9,8 +9,6 @@ type Props = {
 
 const ReferenceAppButton = (props: Props) => {
   const { onReferenceAppClick, data, onExploreAppClick } = props
-  //console.log(onReferenceAppClick);
-  console.log(data.index)
   return (
 
     <div className={data.className} onClick={data.index === 2 ? onExploreAppClick : onReferenceAppClick}>

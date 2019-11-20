@@ -39,7 +39,6 @@ const ComparativeProductViewer = (props: Props) => {
     const devices = Object.keys(deviceByName).length
         ? deviceByName.deviceByName.result
         : []
-    console.log(devices)
     return isFocusListModal || isSuggestProductVisible || devices ? (
         <div className="m_comparission_dropdown">
             <input

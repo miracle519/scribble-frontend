@@ -196,6 +196,7 @@ export const productDetailMenu1 = [
   'Camera',
   "what's Inside?",
 ];
+
 export const productDetailMenu2 = [
   'Yes',
   'No',

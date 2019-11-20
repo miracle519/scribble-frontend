@@ -28,7 +28,6 @@ class Explore extends Component<Props> {
       exploreTitle: "All Products",
       exploreProducts: exploreProducts
     }
-    // console.log("WWWWWWWWWWWWWWW")
     // document.body.scrollTop = 0;
     // document.body.style.overflow = "hidden";
     document.body.id = "explore-page";

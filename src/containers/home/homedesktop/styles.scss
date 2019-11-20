@@ -278,39 +278,24 @@
   @include flex_btwn(flex, flex-end);
   position: fixed;
   height: 100%;
-  right: 0;
   top: 0;
   z-index: 999999;
   // transform: translateX(100%);
   // transition: transform 0.35s;
-  transition: 2s;
-  -webkit-transition: .5s;
-  -moz-transition: .2s;
+  transition: right 2s;
+  -webkit-transition: right 2s;
+  -moz-transition: right 2s;
   right: -100%;
 
   &.left0 {
-    // transform: translateX(0);
-    // transition: transform 0.35s;
+    transition: right 0.55s;
     right: 0;
-  }
-
-  &:before {
-    content: '';
     background: $slide_background_color;
     width: 100%;
     height: 100%;
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px);
   }
-}
-
-.left-portion {
-  width: 40%;
-  float: left;
-  position: absolute;
-  height: 100%;
-  left: 0;
-
 }
 
 .iphn-rgt {

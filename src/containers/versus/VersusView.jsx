@@ -94,9 +94,7 @@ class VersusView extends Component<Props, State> {
 
   onVSButtonClick = (itemid1, itemid2) => {
 
-    console.log(itemid1 + "," + itemid2)
     var product_id = itemid1 + "," + itemid2
-    console.log(product_id)
     this.props.dispatch({
       type: 'GET_VS_MULTI_PRODUCTS',
       payload: { url: GET_DETAIL_PRODUCTION, deviceID: product_id, status: 2 }
@@ -128,7 +126,6 @@ class VersusView extends Component<Props, State> {
     } = this.props
 
 
-    console.log(multiProducts)
     return (
       <div className="wrapper">
         <Header onFeedBackClick={onFeedBackClick} headerClass="header-wrapper" feedbackButton="feedback-style" />

@@ -20,7 +20,6 @@ const TrendingListSection = (props: trendingProductBtnClickType) => {
 
   const { onMouseOver, currentToolTip } = props
   const trendingProducts = props.trendingProducts ? props.trendingProducts : []
-  console.log(trendingProducts)
   return (
     <div className="tech-drop">
       <p>Trending</p>

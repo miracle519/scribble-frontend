@@ -11,7 +11,6 @@ type Props = {
 const DeviceColor = (props: Props) => {
 
   const { colorValues, colorTitle ,item} = props
-  console.log(colorValues)
   return colorValues ? (
     <div className="attr_part color_part" id={item}>
       <div className="color_title">{colorTitle}</div>

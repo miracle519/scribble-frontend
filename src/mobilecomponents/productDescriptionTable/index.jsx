@@ -11,7 +11,6 @@ type Props = {
 
 const ProductDescriptionTable = (props: Props) => {
   const { onProductColorSelect, paneList } = props
-  console.log(paneList);
   return (
     <div className="tab-content">
 

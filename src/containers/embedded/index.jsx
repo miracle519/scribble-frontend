@@ -32,7 +32,6 @@ class Embedded extends Component<Props> {
     })
   }
   onhandleShow = (index) => {
-    console.log(index);
     var paneref = "panepart" + index;
     var paneindex = document.getElementsByClassName("paneindex");
     for (var j = 0; j < paneindex.length; j++) {
@@ -41,7 +40,6 @@ class Embedded extends Component<Props> {
     paneindex[index].classList.add('pointer');
 
     var object = document.getElementById(paneref);
-    console.log(object)
     object.scrollIntoView({ block: 'end', behavior: 'smooth' });
     var session_objects = document.getElementsByClassName("session_title")
     for (var i = 0; i < session_objects.length; i++) {
@@ -51,7 +49,6 @@ class Embedded extends Component<Props> {
   }
   render() {
     const { smartPhoneDetails, versionDetailState } = this.props
-    console.log(smartPhoneDetails)
     const specfications = typeof smartPhoneDetails.smartPhoneDetails.result !== "undefined" ? smartPhoneDetails.smartPhoneDetails.result.specification : {};
     const menulist = Object.keys(specfications).length ? Object.keys(specfications) : []
     const images = typeof smartPhoneDetails.smartPhoneDetails.result !== "undefined" ? smartPhoneDetails.smartPhoneDetails.result.images : [];

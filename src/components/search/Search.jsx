@@ -35,8 +35,6 @@ const Dictaphone = ({
     isListening ? stopListening() : startListening()
     isListening = !isListening
   }
-  console.log("dsfdsdsdsfdsf.............")
-  console.log(defaultValue)
   return (
     <React.Fragment>
       <input

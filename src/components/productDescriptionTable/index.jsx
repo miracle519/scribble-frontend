@@ -17,7 +17,6 @@ const ProductDescriptionTable = (props: Props) => {
   const { onProductColorSelect, paneList,versionDetailState,attributeItems,closebutton} = props
   const panlistkeys = Object.keys(paneList).length ? Object.keys(paneList) : []
   const check=Object.keys(versionDetailState).length ? true:false
-   console.log(check)
    return panlistkeys ? (
     <div className="table_part">
       {

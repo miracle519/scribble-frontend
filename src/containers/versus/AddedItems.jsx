@@ -47,7 +47,6 @@ const AddedItems = (props: Props) => {
   if (products.length == 0 || products[products.length - 1].result !== "search") {
     products.push({ result: "search" });
   }
-  console.log(products)
   return multiProductsState ? (
     <div className="vs_lists">
       {

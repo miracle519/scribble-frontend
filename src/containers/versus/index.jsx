@@ -44,13 +44,8 @@ class Versus extends Component<Props, State> {
 
   }
   componentWillReceiveProps(nextProps) {
-
-
-    console.log(nextProps)
-
     // if (nextProps.multivsProducts.multivsProducts !== this.props.multiProducts.multivsProducts) {
 
-    //   console.log(nextProps.multivsProducts.multivsProducts)
     //   this.setState({ newItmes: nextProps.multivsProducts.multivsProducts })
     // }
 
@@ -86,7 +81,6 @@ class Versus extends Component<Props, State> {
   }
   onCloseItem = () => {
 
-    console.log("close")
   }
   onVSButtonClick = () => {
 
@@ -96,7 +90,6 @@ class Versus extends Component<Props, State> {
       product_id.push(item.productId);
     })
 
-    console.log(product_id)
     this.props.dispatch({
       type: 'GET_VS_MULTI_PRODUCTS',
       payload: { url: GET_DETAIL_PRODUCTION, deviceID: product_id.join(','), status: 2 }

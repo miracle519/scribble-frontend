@@ -5,6 +5,42 @@
   width: 100%;
 }
 
+.selectWrapper {
+  width: 59px;
+  float: right;
+  margin-top: 18px;
+  .buttonChoose {
+    width: 59px;
+    height: 59px;
+    background-color: white;
+
+    opacity: 0.4;
+    cursor: pointer;
+
+    .buttonData {
+      height: 100%;
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    &:first-child {
+      border-radius: 10px 0px 0px 0px;
+    }
+    &:last-child {
+      border-radius: 0px 0px 0px 10px;
+    }
+  }
+}
+
+
 .iphn-row {
   border-top: 2px solid #f9fafb;
 
@@ -107,7 +143,7 @@
 
 .table_part {
   background: white;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 210px);
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 20px;

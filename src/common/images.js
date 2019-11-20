@@ -90,3 +90,7 @@ export const ICON_VOICE = `${PUBLIC_PATH}/images/icon-voice-search.svg`
 export const ICON_SLIDER_ARROWS = `${PUBLIC_PATH}/images/icon-slider-arrows.svg`
 export const RIGHT_ARROW = `${PUBLIC_PATH}/images/icon-arrow-right.svg`
 export const LEFT_ARROW = `${PUBLIC_PATH}/images/icon-arrow-left.svg`
+
+
+export const INFO_DEVICE = `${PUBLIC_PATH}/images/info_data.png`
+export const REVIEW_DEVICE = `${PUBLIC_PATH}/images/info_review.png`

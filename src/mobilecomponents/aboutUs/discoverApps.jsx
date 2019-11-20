@@ -25,7 +25,6 @@ import {
 } from 'common/images'
 
 const DiscoverApps = () => {
-  console.log(vs1)
   const apps = [
     {
       appName: 'VS',

@@ -17,8 +17,6 @@ const SearchListForVs = (props: Props) => {
   const devices = Object.keys(deviceByName).length
     ? deviceByName.deviceByName.result
     : []
-  console.log("filterlist******")
-  console.log(filterButtonList)
   return (
     <div className="p_list container">
       <div className="spos-relative">

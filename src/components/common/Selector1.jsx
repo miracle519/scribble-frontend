@@ -27,13 +27,10 @@ class Selector1 extends React.Component<Props, State>{
   //   nextProps.optionList.brands.brands.map((item, index) => {
   //     temp.push({ name: item.brand_name, value: item.brand_id })
   //   })
-  //   console.log(temp)
   //   this.setState({ options: temp })
 
   // }
   onSelectedValue = (item) => {
-    console.log("selected value...................")
-    console.log(item)
 
   }
 

@@ -16,7 +16,6 @@ type Props = {
 
 const Tabs = (props: Props) => {
   const { onTabChange, tabList, wrapperClass, activeTab, productID } = props
-  console.log(activeTab)
   return (
     <ul className={wrapperClass || 'nav nav-tabs'} role="tablist">
       {tabList.map((item, index) => {
@@ -25,7 +24,6 @@ const Tabs = (props: Props) => {
           versionSlug: item.slug,
           versionName: item.version_name
         }
-        console.log(itemObj.versionName)
         return (
           <li key={index} className="nav-item curor_point nav-background">
             <a

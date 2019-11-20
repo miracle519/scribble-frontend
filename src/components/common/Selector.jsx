@@ -32,16 +32,11 @@ class Selector extends React.Component<Props, State>{
   //   nextProps.optionList1.categories.categories.map((item, index) => {
   //     temp.push({ name: item.category_name, value: item.category_id })
   //   })
-  //   console.log(temp)
   //   this.setState({ options: temp })
 
   // }
 
   onSelectedValue = (item) => {
-
-    console.log("categoryyyyyyyyyyy....")
-    console.log(item)
-
     this.props.dispatch({
       type: 'GET_CB_FILTER_PRODUCTS',
       payload: { url: GET_CB_FILTER_PRODUCTS, categoryID: item.value, brandID: "all" }
@@ -57,7 +52,7 @@ class Selector extends React.Component<Props, State>{
     optionlists.categories.map((item, index) => {
       temp.push({ name: item.category_name, value: item.category_id })
     })
-    console.log(temp)
+
     return temp ? (
       <SelectSearch key="category_select" className="select-search-box" autofocus={false} height={200} options={temp} value="Air Conditioners" name="category_select" placeholder="CATEGORY" onChange={this.onSelectedValue} />
     ) : null

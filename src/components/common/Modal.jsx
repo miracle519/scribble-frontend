@@ -16,7 +16,6 @@ class Modal extends React.Component<Props> {
   render() {
     const { isOpen, children, className } = this.props
     const classShow = this.props.classShow || '';
-    console.log(isOpen)
     if (!isOpen) return null
     return (
       <div className={`modal-open ${className}`}>

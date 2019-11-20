@@ -130,9 +130,6 @@ class Home extends React.Component<Props, State> {
     onProductColorSelect = (event: SyntheticEvent<HTMLButtonElement>) => { }
 
     onProductDetails = (item: Object) => {
-
-        console.log("#####")
-        console.log(item.device_id);
         this.props.dispatch({
             type: 'GET_SMARTPHONE_DETAILS',
             payload: { url: GET_DETAIL_PRODUCTION, deviceID: item.device_id, status: 1 }

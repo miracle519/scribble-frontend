@@ -16,7 +16,6 @@ const RelatedProducts = (props: Props) => {
   const relatedProducts = Object.keys(relatedProductsData).length
     ? relatedProductsData.relatedProducts.result
     : []
-  console.log(relatedProducts)
   return relatedProducts ? (
     <div className="ipn-rp">
       <p>Related Products</p>

@@ -57,7 +57,6 @@ class Signup extends Component {
   handleSubmit(event) {
     this.setState({ submitted: true })
     const { user } = this.state
-    console.log("test")
     if (user.email && user.password) {
       // this.props.register(user);
     }

@@ -41,7 +41,6 @@ class BannerProduction extends React.Component<Props, State> {
     }
   }
   handleChange(event) {
-    console.log(event);
       var element = document.getElementById("vs_scroll");
       var element1 = document.getElementById("scroll_control");
       var scroll = document.getElementById("typeinp");
@@ -54,8 +53,6 @@ class BannerProduction extends React.Component<Props, State> {
 
 
     }
-
-    // console.log(element.scrollWidth);
   }
 
 

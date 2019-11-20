@@ -41,8 +41,6 @@ export default function reducer(state = initialState, action) {
       };
     }
     case REMOVE_ITEM: {
-      console.log("blaxxxxxxx")
-      console.log(state.multivsProducts)
       return {
         ...state,
         multivsProducts: state.multivsProducts.filter((obj, index) => {

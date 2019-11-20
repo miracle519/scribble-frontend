@@ -18,7 +18,6 @@ class CompareVSmodal extends React.Component<Props>{
     const { additems } = this.props
     const lists = Object.keys(additems)
     const count = additems.length
-    console.log(count)
     return lists ? (
       <div className="add_item_part animated fadeInRight">
         <div className="add_title">

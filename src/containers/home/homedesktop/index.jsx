@@ -49,7 +49,6 @@ type Props = {
   versionDetailState: Object,
   trendingProducts: Array<trendingProductType>,
   smartPhoneDetails: Object,
-  relatedProductsToDevice: Array<Object>,
   cbfilterProducts: Object
 }
 
@@ -62,7 +61,6 @@ type State = {
   isDescModalVisible: boolean,
   isSeeSpecModalVisible: boolean,
   productName: string,
-  isArrowClicked: boolean,
   currentToolTip: string,
   isSuggestProductVisible: boolean,
   is_mic_show: boolean,
@@ -70,8 +68,6 @@ type State = {
   sidebar: Array<Object>,
   isDropVisible: boolean,
   attributeItems: Array<string>,
-  isSocialShareModal: boolean,
-  isSocialCheck: boolean,
   backpart: boolean,
   backcheck: boolean,
   linkpart: boolean,
@@ -104,14 +100,11 @@ class DeskTopHome extends React.Component<Props, State> {
       is_mic_show: true,
       productName: '',
       currentToolTip: '',
-      isArrowClicked: false,
       sidebar: sideBarMenu,
       productDetailItem: {},
       isDropVisible: false,
       attributeItems: [],
       closebutton: false,
-      isSocialShareModal: true,
-      isSocialCheck: true,
       AllversionDetail: {},
       loading: true,
       linkpart: false,
@@ -169,7 +162,6 @@ class DeskTopHome extends React.Component<Props, State> {
   onAdvanceSearhClick = () => { }
 
   onTrendingProductBtnClick = (device_id: string, category: string) => {
-    console.log(category)
     this.setState({ categoryID: category })
     this.setState({ deviceID: device_id })
     this.props.dispatch({
@@ -260,7 +252,6 @@ class DeskTopHome extends React.Component<Props, State> {
   getProductByName = debounce(productName => {
     const { dispatch } = this.props
     this.setState({ productName: productName })
-    //console.log(this.state.productName)
 
     if (productName != '') {
       this.setState({ isSuggestProductVisible: true, is_mic_show: false })
@@ -274,11 +265,9 @@ class DeskTopHome extends React.Component<Props, State> {
         payload: { type: 'GET_CB_FILTER_PRODUCTS_RESET' }
       })
       var element = document.getElementsByName("category_select");
-      console.log("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
       if (element.length > 0) {
         element[0].value = "";
       }
-      console.log(element);
 
     } else {
       this.setState({ isSuggestProductVisible: false, is_mic_show: true })
@@ -295,20 +284,6 @@ class DeskTopHome extends React.Component<Props, State> {
 
   onTrendingMouseOver = currentToolTip => {
     this.setState({ currentToolTip })
-  }
-
-  onArrowClick = () => {
-    if (this.state.categoryID !== '') {
-      this.props.dispatch({
-        type: 'GET_RELATED_PRODUCTS',
-        payload: {
-          url: GET_RELATED_PRODUCTS,
-          categoryID: this.state.categoryID
-        }
-      })
-
-      this.setState({ isArrowClicked: !this.state.isArrowClicked })
-    }
   }
 
   callbackHome = data => {
@@ -339,25 +314,9 @@ class DeskTopHome extends React.Component<Props, State> {
   componentWillUnmount() {
     document.removeEventListener('click', this.handleOutsideClick, false)
   }
-  onShareClick = () => {
-
-    if (this.state.isSocialCheck) {
-
-      this.setState({ isSocialShareModal: false })
-      this.setState({ isSocialCheck: false })
-
-    }
-    else {
-      this.setState({ isSocialShareModal: true })
-      this.setState({ isSocialCheck: true })
-
-    }
-
-  }
 
   handleOutsideClick(event) {
-    console.log(event)
-    // this.setState({ isSocialShareModal: false })
+ 
   }
 
   convertToversionDetail1 = (value1, value2) => {
@@ -386,7 +345,6 @@ class DeskTopHome extends React.Component<Props, State> {
 
   }
   onVsItemClick = () => {
-    console.log(this.state.deviceID)
     this.props.dispatch({
       type: 'GET_VS_MULTI_PRODUCTS',
       payload: { url: GET_DETAIL_PRODUCTION, deviceID: this.state.deviceID, status: 2 }
@@ -420,17 +378,16 @@ class DeskTopHome extends React.Component<Props, State> {
       is_mic_show,
       productName,
       currentToolTip,
-      isArrowClicked,
       productDetailItem,
       activeTab,
       isDropVisible,
       attributeItems,
       closebutton,
-      isSocialShareModal,
       categoryID,
       isCloseAboutPop,
       isVisibleMenubar
-    } = this.state
+    } = this.state;
+
     const {
       trendingProducts,
       deviceByName,
@@ -439,11 +396,7 @@ class DeskTopHome extends React.Component<Props, State> {
       smartPhoneDetails,
       versionDetailState,
       cbfilterProducts,
-      relatedProductsToDevice,
-
-    } = this.props
-
-    console.log(cbfilterProducts)
+    } = this.props;
 
     return (
       <div className="wrapper test">
@@ -518,10 +471,8 @@ class DeskTopHome extends React.Component<Props, State> {
           sideBarMenu={this.state.sidebar}
           isDescModalVisible={isDescModalVisible}
           socialApp={socialApp}
-          relatedProductsData={relatedProductsToDevice}
           tabList={tabList}
           tabPane={tabPane}
-          productDetailMenu1={productDetailMenu1}
           productDetailMenu2={productDetailMenu2}
           productDetailItem={smartPhoneDetails}
           onProductTabChange={this.onProductTabChange}
@@ -530,13 +481,9 @@ class DeskTopHome extends React.Component<Props, State> {
           activeTab={activeTab}
           versionDetailState={versionDetailState}
           onShortedProductClick={this.onShortedProductClick}
-          onArrowClick={this.onArrowClick}
-          isArrowClicked={isArrowClicked}
           callbackHome={this.callbackHome}
           attributeItems={attributeItems}
           closebutton={closebutton}
-          isSocialShareModal={isSocialShareModal}
-          onShareClick={this.onShareClick}
           categoryID={categoryID}
           convertToversionDetail1={this.convertToversionDetail1}
           backPart={this.state.backpart}
